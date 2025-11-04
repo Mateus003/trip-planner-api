@@ -46,6 +46,9 @@ jobs:
     needs: build
     runs-on: self-hosted
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
       - name: Pull image from Docker Hub
         run: docker pull ${{ secrets.DOCKER_USERNAME }}/trip-planner-api:latest
 
