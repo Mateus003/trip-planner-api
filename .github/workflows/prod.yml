@@ -30,5 +30,4 @@ jobs:
         uses: docker/setup-buildx-action@v2
 
       - name: Build images
-        working-directory: ./trip-planner-api
         run: docker compose -f docker-compose.yml build
